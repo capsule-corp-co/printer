@@ -1,0 +1,21 @@
+{
+    "name": "capsule-corp-co/printer",
+    "description": "Wrapper Package for Print Node",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mario Velasquez",
+            "email": "mario@dettlaffinc.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+    	"printnode/printnode-php": "dev-master"
+    },
+    "autoload": {
+    	"psr-4": {
+    		"CapsuleCorp\\Printer\\": "src/"
+    	}
+    }
+}
