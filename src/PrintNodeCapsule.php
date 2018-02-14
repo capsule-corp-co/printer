@@ -24,7 +24,7 @@ class PrintNodeCapsule
 
     public function __construct()
     {
-        $this->api_key = config('capsulecorp-printer-config.api-key');
+        $this->api_key = config('capsulecorp-printnode.api-key');
         $this->setCredentials();
         $this->setRequest();
     }

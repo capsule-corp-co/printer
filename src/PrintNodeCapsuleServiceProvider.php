@@ -12,7 +12,9 @@ class PrintNodeCapsuleServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->publishes([
+            __DIR__ . '/config/capsulecorp-printnode.php' => config_path('capsulecorp-printnode.php'),
+        ]);
     }
 
     /**
@@ -22,12 +24,8 @@ class PrintNodeCapsuleServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('capsulecorp-printer', function () {
+        $this->app->bind('capsulecorp-printnodecapsule', function () {
             return new PrintNodeCapsule;
         });
-        $this->mergeConfigFrom(
-            __DIR__ . '/config.php',
-            'capsulecorp-printer-config'
-        );
     }
 }
